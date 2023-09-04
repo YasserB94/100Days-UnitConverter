@@ -10,6 +10,8 @@ import SwiftUI
 struct TemperatureConverterView: View {
     @State var from:TemperatureUnit = .celsius
     @State var input:String = ""
+    @FocusState private var isInputFocused: Bool // Track TextField focus
+
 
     enum TemperatureUnit:String,CaseIterable{
         case celsius = "celsius"
@@ -17,49 +19,59 @@ struct TemperatureConverterView: View {
         case kelvin = "Kelvin"
     }
     var body: some View {
-        ZStack{
-            VStack(spacing:40){
-                inputForm
-                converterUnits
-                Spacer()
-            }
-            .padding()
-            .navigationTitle("Temperature")
+        VStack(spacing: 5) {
+            inputForm
+            Divider() // Add a divider for separation
+            converterUnits
         }
-        
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .navigationBarTitle("Temperature")
     }
     
-    private var inputForm:some View{
-        VStack{
-            HStack{
-                TextField("Convert", text: Binding(
+    private var inputForm: some View {
+        VStack(spacing: 10) { // Add spacing between elements
+            HStack {
+                TextField("Enter Temperature", text: Binding(
                     get: { self.input },
                     set: { newValue in
                         let filteredValue = newValue.filter { $0.isNumber }
                         self.input = filteredValue
                     }
                 ))
+                .focused($isInputFocused) // Bind TextField to focus state
                 .keyboardType(.decimalPad)
                 Text(from.rawValue.capitalized)
+                    .font(.headline)
+                    .foregroundColor(.primary)
+                    .onTapGesture {
+                        isInputFocused = true
+                    }
             }
-            .padding()
-            Picker("Convert From", selection: $from){
-                ForEach(TemperatureUnit.allCases,id:\.self) { unit in
+            Picker("Convert From", selection: $from) {
+                ForEach(TemperatureUnit.allCases, id: \.self) { unit in
                     Text(unit.rawValue.capitalized)
                 }
-            }.pickerStyle(.segmented)
+            }
+            .pickerStyle(.segmented) // Apply a segmented picker style
         }
+        .padding() // Add overall padding
     }
     
-    private var converterUnits:some View{
-        HStack(spacing:20){
-            ForEach(TemperatureUnit.allCases,id:\.self) {unit in
-                VStack(){
+    private var converterUnits: some View {
+        HStack(spacing: 20) {
+            ForEach(TemperatureUnit.allCases, id: \.self) { unit in
+                VStack(alignment: .center) { // Adjust alignment as needed
                     Text(unit.rawValue)
+                        .font(.headline) // Apply a headline font style
+                        .foregroundColor(.primary) // Apply the primary text color
                     Text(String(format: "%.2f°", convertTemperature(from: from, to: unit, input: Double(input) ?? 0)))
+                        .font(.subheadline) // Apply a subheadline font style
+                        .foregroundColor(.secondary) // Apply a secondary text color
                 }
             }
         }
+        .padding(.vertical, 10) // Add vertical padding for spacing
     }
         
     

@@ -53,6 +53,7 @@
 		70645C102AA6607A005F3C57 /* UnitConverter */ = {
 			isa = PBXGroup;
 			children = (
+				70714B342AA672E200D0A0FF /* ViewModels */,
 				70645C1F2AA660BC005F3C57 /* Views */,
 				70645C112AA6607A005F3C57 /* UnitConverterApp.swift */,
 				70645C132AA6607A005F3C57 /* ContentView.swift */,
@@ -84,6 +85,13 @@
 				70645C232AA66100005F3C57 /* TemperatureConverterView.swift */,
 			);
 			path = Temperature;
+			sourceTree = "<group>";
+		};
+		70714B342AA672E200D0A0FF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
