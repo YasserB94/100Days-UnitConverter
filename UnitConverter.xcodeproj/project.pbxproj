@@ -11,6 +11,7 @@
 		70645C142AA6607A005F3C57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70645C132AA6607A005F3C57 /* ContentView.swift */; };
 		70645C162AA6607B005F3C57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70645C152AA6607B005F3C57 /* Assets.xcassets */; };
 		70645C192AA6607B005F3C57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70645C182AA6607B005F3C57 /* Preview Assets.xcassets */; };
+		70645C242AA66100005F3C57 /* TemperatureConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70645C232AA66100005F3C57 /* TemperatureConverterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		70645C132AA6607A005F3C57 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		70645C152AA6607B005F3C57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70645C182AA6607B005F3C57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		70645C232AA66100005F3C57 /* TemperatureConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		70645C102AA6607A005F3C57 /* UnitConverter */ = {
 			isa = PBXGroup;
 			children = (
+				70645C1F2AA660BC005F3C57 /* Views */,
 				70645C112AA6607A005F3C57 /* UnitConverterApp.swift */,
 				70645C132AA6607A005F3C57 /* ContentView.swift */,
 				70645C152AA6607B005F3C57 /* Assets.xcassets */,
@@ -65,6 +68,22 @@
 				70645C182AA6607B005F3C57 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		70645C1F2AA660BC005F3C57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				70645C202AA660CC005F3C57 /* Temperature */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		70645C202AA660CC005F3C57 /* Temperature */ = {
+			isa = PBXGroup;
+			children = (
+				70645C232AA66100005F3C57 /* TemperatureConverterView.swift */,
+			);
+			path = Temperature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70645C242AA66100005F3C57 /* TemperatureConverterView.swift in Sources */,
 				70645C142AA6607A005F3C57 /* ContentView.swift in Sources */,
 				70645C122AA6607A005F3C57 /* UnitConverterApp.swift in Sources */,
 			);
