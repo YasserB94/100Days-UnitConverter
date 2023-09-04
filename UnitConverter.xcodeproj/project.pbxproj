@@ -12,6 +12,7 @@
 		70645C162AA6607B005F3C57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70645C152AA6607B005F3C57 /* Assets.xcassets */; };
 		70645C192AA6607B005F3C57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70645C182AA6607B005F3C57 /* Preview Assets.xcassets */; };
 		70645C242AA66100005F3C57 /* TemperatureConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70645C232AA66100005F3C57 /* TemperatureConverterView.swift */; };
+		70714B362AA6730600D0A0FF /* TemperatureConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70714B352AA6730600D0A0FF /* TemperatureConverterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		70645C152AA6607B005F3C57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70645C182AA6607B005F3C57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		70645C232AA66100005F3C57 /* TemperatureConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverterView.swift; sourceTree = "<group>"; };
+		70714B352AA6730600D0A0FF /* TemperatureConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		70714B342AA672E200D0A0FF /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				70714B352AA6730600D0A0FF /* TemperatureConverterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70714B362AA6730600D0A0FF /* TemperatureConverterViewModel.swift in Sources */,
 				70645C242AA66100005F3C57 /* TemperatureConverterView.swift in Sources */,
 				70645C142AA6607A005F3C57 /* ContentView.swift in Sources */,
 				70645C122AA6607A005F3C57 /* UnitConverterApp.swift in Sources */,
