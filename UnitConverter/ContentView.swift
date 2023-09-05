@@ -10,7 +10,16 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack{
-            TemperatureConverterView()
+            ZStack{
+                List{
+                    NavigationLink {
+                        TemperatureConverterView()
+                    } label: {
+                        Text("Temperature")
+                    }
+                }
+
+            }.navigationTitle("Home")
         }
     }
 }
