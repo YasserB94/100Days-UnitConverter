@@ -13,6 +13,12 @@
 		70645C192AA6607B005F3C57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70645C182AA6607B005F3C57 /* Preview Assets.xcassets */; };
 		70645C242AA66100005F3C57 /* TemperatureConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70645C232AA66100005F3C57 /* TemperatureConverterView.swift */; };
 		70714B362AA6730600D0A0FF /* TemperatureConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70714B352AA6730600D0A0FF /* TemperatureConverterViewModel.swift */; };
+		70939AC92AB2592C00DB6095 /* LengthConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70939AC82AB2592C00DB6095 /* LengthConverterView.swift */; };
+		70939ACB2AB25AD200DB6095 /* LengthConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70939ACA2AB25AD200DB6095 /* LengthConverterViewModel.swift */; };
+		70939ACE2AB25D5000DB6095 /* LengthUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70939ACD2AB25D5000DB6095 /* LengthUnit.swift */; };
+		70939AD02AB25D6300DB6095 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70939ACF2AB25D6300DB6095 /* TemperatureUnit.swift */; };
+		70939AD42AB262BB00DB6095 /* TemperatureConversionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70939AD32AB262BB00DB6095 /* TemperatureConversionModel.swift */; };
+		70939AD62AB2631800DB6095 /* LengthConversionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70939AD52AB2631800DB6095 /* LengthConversionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,12 @@
 		70645C182AA6607B005F3C57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		70645C232AA66100005F3C57 /* TemperatureConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverterView.swift; sourceTree = "<group>"; };
 		70714B352AA6730600D0A0FF /* TemperatureConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverterViewModel.swift; sourceTree = "<group>"; };
+		70939AC82AB2592C00DB6095 /* LengthConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthConverterView.swift; sourceTree = "<group>"; };
+		70939ACA2AB25AD200DB6095 /* LengthConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthConverterViewModel.swift; sourceTree = "<group>"; };
+		70939ACD2AB25D5000DB6095 /* LengthUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthUnit.swift; sourceTree = "<group>"; };
+		70939ACF2AB25D6300DB6095 /* TemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
+		70939AD32AB262BB00DB6095 /* TemperatureConversionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConversionModel.swift; sourceTree = "<group>"; };
+		70939AD52AB2631800DB6095 /* LengthConversionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthConversionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +67,8 @@
 		70645C102AA6607A005F3C57 /* UnitConverter */ = {
 			isa = PBXGroup;
 			children = (
+				70939AD22AB2628B00DB6095 /* Utils */,
+				70939ACC2AB25D4200DB6095 /* Enums */,
 				70714B342AA672E200D0A0FF /* ViewModels */,
 				70645C1F2AA660BC005F3C57 /* Views */,
 				70645C112AA6607A005F3C57 /* UnitConverterApp.swift */,
@@ -76,6 +90,7 @@
 		70645C1F2AA660BC005F3C57 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				70939AC72AB2591500DB6095 /* Length */,
 				70645C202AA660CC005F3C57 /* Temperature */,
 			);
 			path = Views;
@@ -93,8 +108,35 @@
 			isa = PBXGroup;
 			children = (
 				70714B352AA6730600D0A0FF /* TemperatureConverterViewModel.swift */,
+				70939ACA2AB25AD200DB6095 /* LengthConverterViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		70939AC72AB2591500DB6095 /* Length */ = {
+			isa = PBXGroup;
+			children = (
+				70939AC82AB2592C00DB6095 /* LengthConverterView.swift */,
+			);
+			path = Length;
+			sourceTree = "<group>";
+		};
+		70939ACC2AB25D4200DB6095 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				70939ACD2AB25D5000DB6095 /* LengthUnit.swift */,
+				70939ACF2AB25D6300DB6095 /* TemperatureUnit.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		70939AD22AB2628B00DB6095 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				70939AD32AB262BB00DB6095 /* TemperatureConversionModel.swift */,
+				70939AD52AB2631800DB6095 /* LengthConversionModel.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,10 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70939AD62AB2631800DB6095 /* LengthConversionModel.swift in Sources */,
+				70939AD42AB262BB00DB6095 /* TemperatureConversionModel.swift in Sources */,
 				70714B362AA6730600D0A0FF /* TemperatureConverterViewModel.swift in Sources */,
+				70939ACE2AB25D5000DB6095 /* LengthUnit.swift in Sources */,
 				70645C242AA66100005F3C57 /* TemperatureConverterView.swift in Sources */,
+				70939AC92AB2592C00DB6095 /* LengthConverterView.swift in Sources */,
 				70645C142AA6607A005F3C57 /* ContentView.swift in Sources */,
 				70645C122AA6607A005F3C57 /* UnitConverterApp.swift in Sources */,
+				70939AD02AB25D6300DB6095 /* TemperatureUnit.swift in Sources */,
+				70939ACB2AB25AD200DB6095 /* LengthConverterViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

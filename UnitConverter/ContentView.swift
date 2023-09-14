@@ -17,6 +17,11 @@ struct ContentView: View {
                     } label: {
                         Text("Temperature")
                     }
+                    NavigationLink {
+                        LengthConverterView()
+                    } label: {
+                        Text("Length")
+                    }
                 }
 
             }.navigationTitle("Home")
